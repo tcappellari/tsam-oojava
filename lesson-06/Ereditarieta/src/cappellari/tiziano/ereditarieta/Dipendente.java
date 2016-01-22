@@ -2,9 +2,10 @@ package cappellari.tiziano.ereditarieta;
 
 public class Dipendente extends Persona {
 
-	int stipendio;
-	int anzianita;
-	Azienda azienda;
+	private int stipendio;
+	private int anzianita;
+	private Azienda azienda;
+	
 	public int getStipendio() {
 		return stipendio;
 	}
@@ -25,6 +26,6 @@ public class Dipendente extends Persona {
 	}
 	
 	public int calcolaStipendio() {
-		return stipendio * anzianita;
+		return Math.round(stipendio + stipendio * anzianita * 0.2f);
 	}
 }

@@ -1,4 +1,4 @@
-package cappellari.tiziano.azienda;
+package cappellari.tiziano.azienda.base;
 
 public class ContrattoLavoro {
 

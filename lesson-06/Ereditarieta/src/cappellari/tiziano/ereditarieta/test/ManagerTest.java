@@ -23,11 +23,11 @@ public class ManagerTest {
 		d.setAzienda(new Azienda());
 		
 		// metodi specifici della classe Manager
-		d.setBonus(20);
+		d.setBonus(120);
 		d.setProgetto(new Progetto());
 		
 		int stip = d.calcolaStipendio();
-		assertEquals(6000 , stip);
+		assertEquals(15400 , stip);
 	}
 	
 	@Test
@@ -45,11 +45,11 @@ public class ManagerTest {
 		d.setAzienda(new Azienda());
 		
 		// metodi specifici della classe Manager
-		d.setBonus(8);
+		d.setBonus(180);
 		d.setProgetto(new Progetto());
 		
 		int stip = d.calcolaStipendio();
-		assertEquals(11 , stip);
+		assertEquals(62 , stip);
 	}
 
 }

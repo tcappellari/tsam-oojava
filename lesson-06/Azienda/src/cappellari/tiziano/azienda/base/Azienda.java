@@ -1,4 +1,4 @@
-package cappellari.tiziano.azienda;
+package cappellari.tiziano.azienda.base;
 
 public class Azienda {
 
@@ -7,13 +7,14 @@ public class Azienda {
 	private Dipendente[] dipendenti;
 	
 	public int stipendi() {
+		if (dipendenti == null)
+			return 0;
 		
 		int tot = 0;
 		for(Dipendente d: dipendenti) {
 			tot += d.stipendio();
 		}
 		return tot;
-		
 	}
 
 	public String getRagioneSociale() {

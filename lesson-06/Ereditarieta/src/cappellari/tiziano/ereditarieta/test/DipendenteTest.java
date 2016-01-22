@@ -22,7 +22,7 @@ public class DipendenteTest {
 		d.setAzienda(new Azienda());
 		
 		int stip = d.calcolaStipendio();
-		assertEquals(5000, stip);
+		assertEquals(2000, stip);
 		
 	}
 
