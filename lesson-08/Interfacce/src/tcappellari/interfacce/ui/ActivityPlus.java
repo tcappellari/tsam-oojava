@@ -1,12 +1,10 @@
 package tcappellari.interfacce.ui;
 
-
-public class ActivityAnon {
-		
+public class ActivityPlus {
 
 	private String message;
 
-	public ActivityAnon(String msg) {
+	public ActivityPlus(String msg) {
 		message = msg;
 	}
 	
@@ -14,24 +12,18 @@ public class ActivityAnon {
 	
 	public void run() {
 		Button bok = new Button();
-		bok.setListener(new ButtonInterface(){
-			@Override
-			public void onClick(boolean b) {
+		bok.setListener(b -> {
 				System.out.println("Grazie per aver premuto il pulsante, longpress? " 
 									+ b
 									+ " da parte di " + message);
-			}
-		});
+			});
 		
 		Button bko = new Button();
-		bko.setListener(new ButtonInterface(){
-			@Override
-			public void onClick(boolean b) {
+		bko.setListener(b -> {
 				System.out.println("Sciocchino, longpress? "
 						+ b
 						+ " da parte di " + message);
-			}
-		});
+			});
 
 		
 		// UI gestita dal sistema
@@ -42,9 +34,8 @@ public class ActivityAnon {
 
 	
 	public static void main(String[] args) {		
-		ActivityAnon activity = new ActivityAnon("ActivityAnon");
+		ActivityPlus activity = new ActivityPlus("ActivityPlus");
 		activity.run();
 		
 	}
-
 }
